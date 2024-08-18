@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<script src="js/jQuery3-7-1_min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style type="text/css">
+			.z{width:1600px;margin:0 auto;padding: 0;}
+			nav {
+				height: 100px;
+				margin:20px 20px;
+			}
+			nav div{
+				float: left;width:90px;height:80px;margin:0 60px;
+			}
+			nav a {
+				width: 150px;
+				margin: auto;
+				font-size: 24px;
+				color: #000000;
+				height: 80px;
+				text-decoration: none;
+			}
+			nav .xh{height:10px;background-color:red;margin:0px;width:0;}
+			nav div:nth-child(1) a{
+				color: red;
+			}
+			nav div:nth-child(1) .xh{
+				width:80px;height:10px;background-color:red;margin:0px;
+			}
+			nav a:hover{color:red;}
+			nav div:hover .xh{animation: mn 1s;width:120px;}
+			@keyframes mn{
+				0%{
+					width:0px;
+				}
+				100%{
+				width:120px;
+			}}
+			nav img {
+				width: 150px;
+				height: 100px;
+				}
+				#fen{
+					background-color:#f5f1f2;width:1600px;height:1550px;
+				}
+			#demo{height:700px;position: relative;background-color:#f5f1f2;}
+			.item{height:680px;background-color:#f5f1f2;}
+			.tub li{text-indent:0px;width:80px;height:20px;background:rgba(255,255,255,0.3);}
+			.tub .active{background-color:orangered;width:80px;height:20px;}
+			#jieshao{height:760px;background-color:#f5f1f2;position:ab;width:100%;}
+			#bgc{background-image:url(material/3.homePage/3、lishiwenhua/lishiwenhua.png);background-repeat:no-repeat; 
+			background-size:1000px 600px;margin:40px auto;width:1000px;position: relative;height:600px;}
+			.zi{
+				width:300px;margin:110px 50px;height:400px;position: absolute;
+			}
+			.zi p{
+				font-size:18px;
+			}
+			#jian{width:200px;height:500px;margin:0 300px;padding:450px 0;}
+			.glyphicon-arrow-right{margin:0 50px;}
+			#liao{width:350px;height:50px;margin:0 auto;}
+			#liao img{width:150px;height:40px;margin:0 90px;}
+			#liao p{font-size:16px;margin:10px 0;}
+			#new{width:100%; height:800px;background-color: white;position: relative;}
+			#bj{background-image:url(material/3.homePage/4.news/news.png);background-repeat:no-repeat; 
+			background-size:1300px 600px;margin:40px auto;width:1300px;position: relative;height:700px;}
+			#demo2{
+				margin:70px 30px;width:650px;height:600px;position:absolute;
+			}
+			#demo2 .carousel-indicators{bottom:-170px;}
+			.demo2 div{width:60px;height:60px;font-size:24px;}
+			.demo2 li{text-indent:0;width:60px;height:60px;}
+			.demo2 .active{background-image:url(material/3.homePage/4.news/huaquan.png);background-size:60px 60px;background-repeat: no-repeat;width:60px;height:80px;padding-top:10px;}
+			#new .carousel-inner{height:700px;}
+			#new #geng {margin:50px 700px;position: absolute;}
+			#new #geng img{width:30px;height:80px;}
+			#new #hh{width:40px; height:300px;margin:50px 800px;position: absolute;}
+			#new #hh p{font-size:20px;font-family:glyphicons halflings;writing-mode: tb-rl;line-height:30px;font-weight:700px;}
+			#new #ming{width:150px;height:210px;margin:-20px 1140px;position: absolute;}
+			#new #ming span{font-size:18px;writing-mode:tb-rl;margin:0 -10px;}
+			#new #ming h1{font-size:22px;writing-mode:tb-rl;font-weight:bold;}
+			#new #ming #l{margin:-330px -50px;}
+			.bg3{background-color:#a1403f;height:500px;position: absolute;width:1600px;}
+			.bg3 .dabox .tt{float:left;margin:30px;}
+			.bg3 .dabox .tt span{margin:10px 70px;font-size: 30px;color: white;}
+			
+			.jcsp{margin:700px 0;height:10px;width: 1600px;}
+			.jcsp video{border-radius: 20px;margin:20px 50px;}
+			.jcsp th{
+				width:20px;
+				padding: 5px 20px;
+			}
+			.jcsp td{text-align: center;}
+			.tr1{position: relative;}
+			.gkgd{
+				text-align: center;
+				margin:80px 0px;
+			}
+			.gkgd img{width:150px;height:40px;}
+			/* 留言 */
+			#form{background-color:#f5f1f2;width: 1600px; position: relative;}
+			.fo{
+				margin-top: 40px;
+				text-align: center;
+			}
+			.fo input{
+				width: 45%;
+				height: 40px;
+			}
+			.fo .ly{
+				width: 90%;
+				height: 200px;
+				margin-top: 20px;
+			}
+			.fo img{margin: 50px 0px;}
+			.bg6 {
+							height: 200px;
+							background-color:#972a27;
+						}
+			.bg6 p{margin:0 auto;text-align: center;font-size:18px;line-height:50px;}		
+			/* 人物变大 */
+			.dabox .bb img:hover{transform: scale(1.4);}
+			.divs{ border: 1px solid white;
+			    border-radius: 10px;
+			    position: relative;
+			    top: 80px;
+			    color: white;
+			    left: 10px;
+			    width: 180px;
+			    padding: 5px;
+			    background-color: gray;
+			    display: none;}
+		</style>
+		<script>
+			$(function(){
+				$(".dabox .bb img").hover(function(){
+					$(this).nextAll().show();
+				},function(){
+					$(this).next().next().next().hide();
+				});
+				//点击箭头id清空并追加内容到class为zi的里面
+				$(".glyphicon-arrow-right").click(function(){
+					$st='<p>川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。</p>'+
+					'<p>川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。</p>';
+					$(".zi").html($st);
+				});
+				$(".glyphicon-arrow-left").click(function(){
+					$srt='<p>川剧，俗称川戏，主要流行于中国西南地区川渝云贵四省市的汉族地区，是融汇高腔、昆曲、胡琴(即皮黄)、弹戏(即梆子)和四川民间灯戏五种声腔艺术而成的传统剧种。</p>'+
+						'<p>川剧是汉族戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区。</p>'+
+						'<p>川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。</p>';
+					$(".zi").html($srt);
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="z">
+			<nav>
+				<div><a href="index.html" class="glyphicon glyphicon-send" style="text-decoration: none;">首页<br /><span>HOME</span></a>
+				<br /><div class="xh"></div></div>
+				<div><a href="article.html" class="glyphicon glyphicon-pencil" style="text-decoration: none;">川剧动态<br /><span>ARTICLE</span></a>
+				<br /><div class="xh"></div></div>
+				<div><a href="history.html" class="glyphicon glyphicon-floppy-disk" style="text-decoration: none;">历史文化<br /><span>HISTORY</span></a>
+				<br /><div class="xh"></div></div>
+				<div><img src="material/3.homePage/1、daohang/logo.png" /></div>
+				<div style="margin:0 100px;"><a href="photo.html" class="glyphicon glyphicon-picture" style="text-decoration: none;"> 精彩剧照<br /><span>PHOTO</span></a>
+				<br /><div class="xh"></div></div>
+				<div><a href="app.html" class="glyphicon glyphicon-download-alt" style="text-decoration: none;">手机订阅<br /><span>APP</span></a>
+				<br /><div class="xh"></div></div>
+				<div><a href="contact.html" class="glyphicon glyphicon-piggy-bank" style="text-decoration: none;">联系<br /><span>CONTACT</span></a>
+				<br /><div class="xh"></div></div>
+			</nav>
+<div id="fen">			
+<banner id="demo" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators tub">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+					<li data-target="#demo" data-slide-to="3"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active ">
+						<img src="material/3.homePage/2、banner/banner1.png" />
+					</div>
+					<div class="item">
+						<img src="material/3.homePage/2、banner/banner2.png" />
+					</div>
+					<div class="item ">
+						<img src="material/3.homePage/2、banner/banner3.png" />
+					</div>
+					<div class="item ">
+						<img src="material/3.homePage/2、banner/banner4.png" />
+					</div>
+				</div>
+				<a class="left carousel-control" href="#demo" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#demo" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</banner>
+			<div id="jieshao">
+				<div id="bgc">
+					<div class="zi">
+						<p>川剧，俗称川戏，主要流行于中国西南地区川渝云贵四省市的汉族地区，是融汇高腔、昆曲、胡琴(即皮黄)、弹戏(即梆子)和四川民
+						间灯戏五种声腔艺术而成的传统剧种。</p>
+						<p>川剧是汉族戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区。</p>
+						<p>川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。</p>
+						
+					</div>
+					<div id="jian"><div class="glyphicon glyphicon-arrow-left"></div><div class="glyphicon glyphicon-arrow-right"></div></div>
+				</div><br />
+				<div id="liao"><img src="material/3.homePage/3、lishiwenhua/liaojiegengduo.png" /><br />
+								<p>川剧文化博大精深   深入学习了解川剧发展历史</p></div>
+			</div>
+			</div>
+			<div id="new">
+				<div id="bj">
+				<div id="demo2" class="carousel slide" data-ride="carousel" style="width:600px;height:400px;">
+				<!-- Indicators -->
+				<ol class="carousel-indicators demo2">
+					<li data-target="#demo2" data-slide-to="0" class="active"><div>壹</div> </li>
+					<li data-target="#demo2" data-slide-to="1"><div>贰</div></li>
+					<li data-target="#demo2" data-slide-to="2"><div>叁</div></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active " style="height:480px;">
+						<img src="material/3.homePage/4.news/3.png" style="width:600px;height:400px;"/>
+						<div style="height:80px;background-color:white;width:600px;"></div>
+					</div>
+					<div class="item" style="height:480px;">
+						<img src="material/3.homePage/4.news/2.png" style="width:600px;height:400px;"/>
+						<div style="height:80px;background-color:darkred;width:600px;">
+							<p style="color: white;font-size:18px;">6月8号，有着“川剧皇后”美誉的著名川剧表演艺术家徐倩云在成都病逝，享年94岁，当代著名戏剧家、被誉为“巴蜀鬼才”
+				的魏明伦听说这个消息悲痛不已，6月9号他还创作了一副长联《悼徐倩云》怀念这位道友.</p>
+ 					</div>
+						
+					</div>
+					<div class="item " style="height:480px;">
+						<img src="material/3.homePage/4.news/news-people.png" style="width:600px;height:400px;"/>
+						<div style="height:80px;background-color:darkred;width:600px;">
+							<p style="color: white;font-size:18px;">6月8号，有着“川剧皇后”美誉的著名川剧表演艺术家徐倩云在成都病逝，享年94岁，当代著名戏剧家、被誉为“巴蜀鬼才”
+				的魏明伦听说这个消息悲痛不已，6月9号他还创作了一副长联《悼徐倩云》怀念这位道友.</p>
+ 					</div>
+					</div>
+				</div>
+				</div>
+				<div id="geng"><img src="material/3.homePage/4.news/more.png" /> </div>
+				<div id="hh"><p>6月8号，有着“川剧皇后”美誉的著名川剧表演艺术家徐倩云在成都病逝，享年94岁，当代著名戏剧家、被誉为“巴蜀鬼才”
+				的魏明伦听说这个消息悲痛不已，6月9号他还创作了一副长联《悼徐倩云》怀念这位道友.</p></div>
+				<div id="ming">
+					<h1>戏曲名家说</h1>
+					<span>Thery of famous dramatists</span>
+					<h1 id="l">徐倩云带走了一个戏曲时代</h1>
+				</div>
+				</div>
+				<div id="liao"><img src="material/3.homePage/3、lishiwenhua/liaojiegengduo.png" /><br />
+								<p style="text-align: center;">川剧文化博大精深 深入学习了解川剧新闻</p></div>
+	<br /><br /><br /><br /><br /><br /><br />
+				<div class="bg3">
+		<div class="dabox">
+			<div class="tt aa"><img src="material/3.homePage/5、mingjia/chuanjumingjia.png" style="margin-top: -90px;height:470px;width:80px;"/> </div>
+			<div class="tt bb"><img src="material/3.homePage/5、mingjia/shen.png" style="margin-top: -100px;"/><br /><span>沈铁梅</span>
+			<div class="divs">川剧起源于何时，语焉不详，多有歧异，但形成于清代却有共识。重庆川剧受到重庆广博性情的陶冶，铸就了包容的胸襟。</div> 
+			</div>
+		<div class="tt bb"><img src="material/3.homePage/5、mingjia/chen.png" style="margin-top: -100px;"/><br /><span>肖德梅</span>
+		<div class="divs">川剧起源于何时，语焉不详，多有歧异，但形成于清代却有共识。重庆川剧受到重庆广博性情的陶冶，铸就了包容的胸襟。</div> 
+		</div>
+		<div class="tt bb"><img src="material/3.homePage/5、mingjia/xiao.png" style="margin-top: -100px;"/><br /><span>陈巧茹</span>
+		<div class="divs">川剧起源于何时，语焉不详，多有歧异，但形成于清代却有共识。重庆川剧受到重庆广博性情的陶冶，铸就了包容的胸襟。</div> 
+		</div>
+		<div class="tt bb"><img src="material/3.homePage/5、mingjia/lv.png" style="margin-top: -100px;"/><br /><span>虞佳</span>
+		<div class="divs">川剧起源于何时，语焉不详，多有歧异，但形成于清代却有共识。重庆川剧受到重庆广博性情的陶冶，铸就了包容的胸襟。</div> 
+		</div>
+		<div class="tt "><img src="material/3.homePage/5、mingjia/dengduo.png" style="width:35px;height:150px;margin:250px 20px;"/><br />
+			<p style="writing-mode: tb-rl;font-size:18px;font-weight:bolder;color:white;margin:-500px 100px;">了解名人故事&nbsp;深入川剧文化</p>
+			</div>
+		</div>
+			</div>
+		</div>
+		<br />
+	<div class="jcsp container">
+				<form >
+					<table >
+						<tr class="tr1">
+							<th rowspan="4"><img src="material/3.homePage/6、shipin/chuanjushipin.png" ></th>
+							<th>
+								<video  height="150"  controls>
+								<source src="material/video/wohu.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+							<th>
+								<video  height="150" controls>
+								<source src="material/video/chuanjubianlian.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+							<th>
+								<video  height="150" controls>
+								<source src="material/video/gundeng.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+						</tr>
+						<tr>
+							<td>[川剧]卧虎令选段</td>
+							<td>[川剧变脸]令人叹为观止</td>
+							<td>[川剧]川剧“滚灯”</td>
+						</tr>
+						<tr>
+							<th>
+								<video  height="150" controls>
+								<source src="material/video/baishezhuan.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+							<th>
+								<video height="150" controls>
+								<source src="material/video/xiaosheng.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+							<th>
+								<video height="150" controls>
+								<source src="./material/video/chengdu.mp4" type="video/mp4"></source>
+								</video>
+							</th>
+						</tr>
+						<tr>
+							<td>[川剧]白蛇传</td>
+							<td>[川剧]小生褶子功</td>
+							<td>[川剧版]《成都》玉玉梅</td>
+						</tr>
+					</table>
+				</form>
+				<div class="gkgd">
+					<img src="material/3.homePage/6、shipin/liaojiegengduo.png" >
+				</div>
+			</div>
+			<div class="carousel" id="form">
+				<div class="container" >
+					<form class="fo">
+						<input type="text" name="name" placeholder="姓名:"/>
+						<input type="tel" name="tel" placeholder="电话:"/>
+						<input type="text" name="liuyan" placeholder="留言:" class="ly"/>
+						<img src="material/3.homePage/7.lianxiwomeng/tijiao.png" >
+					</form>
+				</div>
+			</div>
+			<div class="bg6">
+				<div style="margin-left:150px;margin-top:20px;float: left; position: relative;margin-right: 30px;">
+									<img src="material/3.homePage/8、footer/logo2.png" style="width:150px;height: 150px;"/>
+								</div>
+								<div style="padding-top:20px;margin:0 auto;width:650px;">
+									<p style="font-size: 20px; color: white;">网上传播视听节目许可证编号:2304068&nbsp;发证机关:国家广播电影电视总局</p >
+									<p style="font-size: 20px;color: white;">2005-2021四川新闻网版权所有ICP川B2-20030088</p >
+									<p style="font-size: 20px;color: white;">川公网安备51019002001692</p >
+								</div>
+							</div>
+		</div>
+	</body>
+
+</html>
